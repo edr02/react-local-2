@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3266d5050",
+  "policyUUID": "266d5050",
+  "bucketName": "reactlocal21da63b3eeb3e47589a74d894d449a078",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
