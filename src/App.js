@@ -4,6 +4,7 @@ import { API } from 'aws-amplify';
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import { listNotes } from './graphql/queries';
+import { NavBar } from './ui-components';
 import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
 import {/* API,*/ Storage } from 'aws-amplify';
 
@@ -57,6 +58,7 @@ function App({ signOut, user }) {
 
   return (
     <div className="App">
+      <NavBar/>
       <input
   type="file"
   onChange={onChange}
