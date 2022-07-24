@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { API } from 'aws-amplify';
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import { listNotes } from './graphql/queries';
 import { NavBar } from './ui-components';
 import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
-import {/* API,*/ Storage } from 'aws-amplify';
+import { API, Storage } from 'aws-amplify';
 
 const initialFormState = { name: '', description: '' }
 
@@ -63,18 +62,7 @@ function App({ signOut, user }) {
   type="file"
   onChange={onChange}
 />
-{
-  notes.map(note => (
-    <div key={note.id || note.name}>
-      <h2>{note.name}</h2>
-      <p>{note.description}</p>
-      <button onClick={() => deleteNote(note)}>Delete note</button>
-      {
-        note.image && <img src={note.image} style={{width: 400}} />
-      }
-    </div>
-  ))
-}
+
 
 
       <h1>My Notes App</h1>
